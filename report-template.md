@@ -24,23 +24,21 @@ It got much better. The RMSE score was 1.79 before hyperparameter tuning and aft
 I will definitly try more Hyperparameter tuning by adding more range of parameters. But also on top of that feature engineerng! Maybe adding more features could help like the weather or the temperature of the day, the hour of the day, etc.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
+|model|GMB|XGB|CAT|score|
 |--|--|--|--|--|
-|initial|Default|Default|Default|Default|
-|add_features|?|?|?|?|
-|hpo|?|?|?|?|
+|initial|Default|Default|Default|1.85|
+|add_features|Default|Default|Default|1.79|
+|hpo|num_boost_round=25|n_estimator=100|iteration=25|1.36|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
-TODO: Replace the image below with your own.
 
-![model_train_score.png](img/model_train_score.png)
+![model_train_score.png](model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
-TODO: Replace the image below with your own.
 
-![model_test_score.png](img/model_test_score.png)
+![model_test_score.png](model_test_score.png)
 
 ## Summary
-TODO: Add your explanation
+n the bike-sharing demand competition, we developed models to predict bike rental demand. Initially, we observed that LightGBM (Gradient Boosting Machine) performed well. Through exploratory analysis, we identified key factors, such as time of day and date, that significantly impacted demand. We enhanced the model by creating additional features, including calendar-wise variables, which improved predictions. We conducted hyperparameter tuning for LightGBM, XGBoost, and CatBoost, optimizing their configurations for better performance. With additional time, we would focus on refining feature engineering, exploring advanced ensemble methods, and experimenting with other models. Further hyperparameter tuning and advanced optimization techniques would also be beneficial.
